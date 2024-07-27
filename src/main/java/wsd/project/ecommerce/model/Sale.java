@@ -5,6 +5,11 @@ import java.time.LocalDate;
 
 @Entity
 @Data
+@Table(indexes = {
+        @Index(name = "idx_sale_date", columnList = "date"),
+        @Index(name = "idx_sale_customer_id", columnList = "customer_id"),
+        @Index(name = "idx_sale_item_id", columnList = "item_id")
+})
 public class Sale {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

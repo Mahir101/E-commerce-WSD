@@ -34,3 +34,8 @@ CREATE TABLE IF NOT EXISTS user_info (
     email VARCHAR(255),
     role VARCHAR(255)
 );
+
+-- Adding indexes
+CREATE INDEX idx_sale_date ON sale(date);
+CREATE INDEX idx_sale_customer_id ON sale(customer_id);
+CREATE INDEX idx_sale_item_id ON sale(item_id);
